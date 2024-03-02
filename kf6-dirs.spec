@@ -5,8 +5,8 @@
 %define		_enable_debug_packages	0
 Summary:	KDE Frameworks - common directories
 Name:		kf6-dirs
-Version:	5.249.0
-Release:	0.1
+Version:	6.0.0
+Release:	1
 License:	LGPL
 Group:		X11/Libraries
 URL:		http://www.kde.org/
