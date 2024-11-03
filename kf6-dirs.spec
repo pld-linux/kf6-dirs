@@ -6,7 +6,7 @@
 Summary:	KDE Frameworks - common directories
 Name:		kf6-dirs
 Version:	6.7.0
-Release:	2
+Release:	3
 License:	LGPL
 Group:		X11/Libraries
 URL:		http://www.kde.org/
@@ -36,7 +36,8 @@ install -d \
 	$RPM_BUILD_ROOT%{_libexecdir}/kf6 \
 	$RPM_BUILD_ROOT%{_libdir}/kf6 \
 	$RPM_BUILD_ROOT%{_libdir}/qt6/plugins/kf6/{kded,parts,propertiesdialog,urifilters,org.kde.kwindowsystem.platforms} \
-	$RPM_BUILD_ROOT%{_libdir}/qt6/plugins/{kcms,org.kde.kdecoration2,script} \
+	$RPM_BUILD_ROOT%{_libdir}/qt6/plugins/{kcms,org.kde.kdecoration2,pim6,script} \
+	$RPM_BUILD_ROOT%{_libdir}/qt6/plugins/pim6/{akonadi,kcms,kontact,messageviewer} \
 	$RPM_BUILD_ROOT%{_libdir}/qt6/qml/org/kde/{kconfig,kio,draganddrop,kcoreaddons,kquickcontrols,kquickcontrolsaddons,kwindowsystem,private/kquickcontrols,runnermodel} \
 	$RPM_BUILD_ROOT%{_libdir}/qt6/qml/org/kde/plasma/private \
 	$RPM_BUILD_ROOT%{_libdir}/qt6/qml/QtQuick/Controls/Styles \
@@ -112,6 +113,11 @@ check_filesystem_dirs
 %dir %{_libdir}/qt6/plugins/kf6/parts
 %dir %{_libdir}/qt6/plugins/kf6/propertiesdialog
 %dir %{_libdir}/qt6/plugins/kf6/urifilters
+%dir %{_libdir}/qt6/plugins/pim6
+%dir %{_libdir}/qt6/plugins/pim6/akonadi
+%dir %{_libdir}/qt6/plugins/pim6/kcms
+%dir %{_libdir}/qt6/plugins/pim6/kontact
+%dir %{_libdir}/qt6/plugins/pim6/messageviewer
 %dir %{_libdir}/qt6/qml/QtQuick/Controls
 %dir %{_libdir}/qt6/qml/QtQuick/Controls/Styles
 %dir %{_libdir}/qt6/qml/org
