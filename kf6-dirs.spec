@@ -6,7 +6,7 @@
 Summary:	KDE Frameworks - common directories
 Name:		kf6-dirs
 Version:	6.11.0
-Release:	1
+Release:	2
 License:	LGPL
 Group:		X11/Libraries
 URL:		http://www.kde.org/
@@ -36,7 +36,7 @@ install -d \
 	$RPM_BUILD_ROOT%{_libexecdir}/kf6 \
 	$RPM_BUILD_ROOT%{_libdir}/kf6 \
 	$RPM_BUILD_ROOT%{_libdir}/qt6/plugins/kf6/{kded,parts,propertiesdialog,urifilters,org.kde.kwindowsystem.platforms} \
-	$RPM_BUILD_ROOT%{_libdir}/qt6/plugins/{kcms,org.kde.kdecoration2,pim6,script} \
+	$RPM_BUILD_ROOT%{_libdir}/qt6/plugins/{kcms,org.kde.kdecoration2,org.kde.kdecoration3,pim6,script} \
 	$RPM_BUILD_ROOT%{_libdir}/qt6/plugins/pim6/{akonadi,kcms,kontact,messageviewer} \
 	$RPM_BUILD_ROOT%{_libdir}/qt6/qml/org/kde/{kconfig,kio,draganddrop,kcoreaddons,kquickcontrols,kquickcontrolsaddons,kwindowsystem,private/kquickcontrols,runnermodel} \
 	$RPM_BUILD_ROOT%{_libdir}/qt6/qml/org/kde/plasma/private \
@@ -105,6 +105,7 @@ check_filesystem_dirs
 %dir %{_libexecdir}/kf6
 %dir %{_libdir}/kf6
 %dir %{_libdir}/qt6/plugins/org.kde.kdecoration2
+%dir %{_libdir}/qt6/plugins/org.kde.kdecoration3
 %dir %{_libdir}/qt6/plugins/script
 %dir %{_libdir}/qt6/plugins/kcms
 %dir %{_libdir}/qt6/plugins/kf6
