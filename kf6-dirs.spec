@@ -6,7 +6,7 @@
 Summary:	KDE Frameworks - common directories
 Name:		kf6-dirs
 Version:	6.16.0
-Release:	1
+Release:	2
 License:	LGPL
 Group:		X11/Libraries
 URL:		http://www.kde.org/
@@ -36,13 +36,13 @@ install -d \
 	$RPM_BUILD_ROOT%{_libexecdir}/kf6 \
 	$RPM_BUILD_ROOT%{_libdir}/kf6 \
 	$RPM_BUILD_ROOT%{_libdir}/qt6/plugins/kf6/{kded,parts,propertiesdialog,urifilters,org.kde.kwindowsystem.platforms} \
-	$RPM_BUILD_ROOT%{_libdir}/qt6/plugins/{kcms,org.kde.kdecoration2,org.kde.kdecoration3,pim6,script} \
+	$RPM_BUILD_ROOT%{_libdir}/qt6/plugins/{kcms,org.kde.kdecoration2,org.kde.kdecoration3,org.kde.kdecoration3.kcm,pim6,script} \
 	$RPM_BUILD_ROOT%{_libdir}/qt6/plugins/pim6/{akonadi,kcms,kontact,messageviewer} \
 	$RPM_BUILD_ROOT%{_libdir}/qt6/qml/org/kde/{kconfig,kio,draganddrop,kcoreaddons,kquickcontrols,kquickcontrolsaddons,kwindowsystem,private/kquickcontrols,runnermodel} \
 	$RPM_BUILD_ROOT%{_libdir}/qt6/qml/org/kde/plasma/private \
 	$RPM_BUILD_ROOT%{_libdir}/qt6/qml/QtQuick/Controls/Styles \
 	$RPM_BUILD_ROOT%{_libdir}/qt6/platformqml/touch/org/kde/plasma \
-	$RPM_BUILD_ROOT%{_docdir}/HTML/{af,ca,cs,da,de,el,en,eo,es,et,fr,gl,he,hu,it,ja,ko,lt,nds,nl,nn,pl,pt,pt_BR,ro,ru,sl,sr,sr@latin,sv,tr,uk,wa,xh} \
+	$RPM_BUILD_ROOT%{_docdir}/HTML/{af,ca,cs,da,de,el,en,eo,es,et,fr,gl,he,hu,it,ja,ko,lt,nds,nl,nn,pl,pt,pt_BR,ro,ru,sl,sr,sr@latin,sv,tr,uk,wa,xh,zh_CN}/kcontrol \
 	$RPM_BUILD_ROOT%{_sysconfdir}/xdg/ui
 
 
@@ -106,6 +106,7 @@ check_filesystem_dirs
 %dir %{_libdir}/kf6
 %dir %{_libdir}/qt6/plugins/org.kde.kdecoration2
 %dir %{_libdir}/qt6/plugins/org.kde.kdecoration3
+%dir %{_libdir}/qt6/plugins/org.kde.kdecoration3.kcm
 %dir %{_libdir}/qt6/plugins/script
 %dir %{_libdir}/qt6/plugins/kcms
 %dir %{_libdir}/qt6/plugins/kf6
@@ -143,36 +144,72 @@ check_filesystem_dirs
 %dir %{_sysconfdir}/xdg/ui
 %dir %{_docdir}/HTML/
 %lang(af) %dir %{_docdir}/HTML/af
+%lang(af) %dir %{_docdir}/HTML/af/kcontrol
 %lang(ca) %dir %{_docdir}/HTML/ca
+%lang(ca) %dir %{_docdir}/HTML/ca/kcontrol
 %lang(cs) %dir %{_docdir}/HTML/cs
+%lang(cs) %dir %{_docdir}/HTML/cs/kcontrol
 %lang(da) %dir %{_docdir}/HTML/da
+%lang(da) %dir %{_docdir}/HTML/da/kcontrol
 %lang(de) %dir %{_docdir}/HTML/de
+%lang(de) %dir %{_docdir}/HTML/de/kcontrol
 %lang(el) %dir %{_docdir}/HTML/el
+%lang(el) %dir %{_docdir}/HTML/el/kcontrol
 %lang(en) %dir %{_docdir}/HTML/en
+%lang(en) %dir %{_docdir}/HTML/en/kcontrol
 %lang(eo) %dir %{_docdir}/HTML/eo
+%lang(eo) %dir %{_docdir}/HTML/eo/kcontrol
 %lang(es) %dir %{_docdir}/HTML/es
+%lang(es) %dir %{_docdir}/HTML/es/kcontrol
 %lang(et) %dir %{_docdir}/HTML/et
+%lang(et) %dir %{_docdir}/HTML/et/kcontrol
 %lang(fr) %dir %{_docdir}/HTML/fr
+%lang(fr) %dir %{_docdir}/HTML/fr/kcontrol
 %lang(gl) %dir %{_docdir}/HTML/gl
+%lang(gl) %dir %{_docdir}/HTML/gl/kcontrol
 %lang(he) %dir %{_docdir}/HTML/he
+%lang(he) %dir %{_docdir}/HTML/he/kcontrol
 %lang(hu) %dir %{_docdir}/HTML/hu
+%lang(hu) %dir %{_docdir}/HTML/hu/kcontrol
 %lang(it) %dir %{_docdir}/HTML/it
+%lang(it) %dir %{_docdir}/HTML/it/kcontrol
 %lang(ja) %dir %{_docdir}/HTML/ja
+%lang(ja) %dir %{_docdir}/HTML/ja/kcontrol
 %lang(ko) %dir %{_docdir}/HTML/ko
+%lang(ko) %dir %{_docdir}/HTML/ko/kcontrol
 %lang(lt) %dir %{_docdir}/HTML/lt
+%lang(lt) %dir %{_docdir}/HTML/lt/kcontrol
 %lang(nds) %dir %{_docdir}/HTML/nds
+%lang(nds) %dir %{_docdir}/HTML/nds/kcontrol
 %lang(nl) %dir %{_docdir}/HTML/nl
+%lang(nl) %dir %{_docdir}/HTML/nl/kcontrol
 %lang(nn) %dir %{_docdir}/HTML/nn
+%lang(nn) %dir %{_docdir}/HTML/nn/kcontrol
 %lang(pl) %dir %{_docdir}/HTML/pl
+%lang(pl) %dir %{_docdir}/HTML/pl/kcontrol
 %lang(pt) %dir %{_docdir}/HTML/pt
+%lang(pt) %dir %{_docdir}/HTML/pt/kcontrol
 %lang(pt_BR) %dir %{_docdir}/HTML/pt_BR
+%lang(pt_BR) %dir %{_docdir}/HTML/pt_BR/kcontrol
 %lang(ro) %dir %{_docdir}/HTML/ro
+%lang(ro) %dir %{_docdir}/HTML/ro/kcontrol
 %lang(ru) %dir %{_docdir}/HTML/ru
+%lang(ru) %dir %{_docdir}/HTML/ru/kcontrol
 %lang(sl) %dir %{_docdir}/HTML/sl
+%lang(sl) %dir %{_docdir}/HTML/sl/kcontrol
 %lang(sr) %dir %{_docdir}/HTML/sr
+%lang(sr) %dir %{_docdir}/HTML/sr/kcontrol
 %lang(sr@latin) %dir %{_docdir}/HTML/sr@latin
+%lang(sr@latin) %dir %{_docdir}/HTML/sr@latin/kcontrol
 %lang(sv) %dir %{_docdir}/HTML/sv
+%lang(sv) %dir %{_docdir}/HTML/sv/kcontrol
 %lang(tr) %dir %{_docdir}/HTML/tr
+%lang(tr) %dir %{_docdir}/HTML/tr/kcontrol
 %lang(uk) %dir %{_docdir}/HTML/uk
+%lang(uk) %dir %{_docdir}/HTML/uk/kcontrol
 %lang(wa) %dir %{_docdir}/HTML/wa
+%lang(wa) %dir %{_docdir}/HTML/wa/kcontrol
 %lang(xh) %dir %{_docdir}/HTML/xh
+%lang(xh) %dir %{_docdir}/HTML/xh/kcontrol
+%lang(zh_CN) %dir %{_docdir}/HTML/zh_CN
+%lang(zh_CN) %dir %{_docdir}/HTML/zh_CN/kcontrol
