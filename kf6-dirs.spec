@@ -10,7 +10,6 @@ Release:	1
 License:	LGPL
 Group:		X11/Libraries
 URL:		http://www.kde.org/
-%requires_eq_to Qt6Core Qt6Core-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
