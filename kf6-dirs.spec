@@ -6,7 +6,7 @@
 Summary:	KDE Frameworks - common directories
 Name:		kf6-dirs
 Version:	6.23.0
-Release:	2
+Release:	3
 License:	LGPL
 Group:		X11/Libraries
 URL:		http://www.kde.org/
@@ -23,12 +23,14 @@ install -d \
 	$RPM_BUILD_ROOT%{_includedir}/KF6 \
 	$RPM_BUILD_ROOT%{_datadir}/kdevappwizard/templates \
 	$RPM_BUILD_ROOT%{_datadir}/kf6/{kcookiejar,widgets/pics,locale} \
+	$RPM_BUILD_ROOT%{_datadir}/kglobalaccel \
 	$RPM_BUILD_ROOT%{_datadir}/kio/servicemenus \
 	$RPM_BUILD_ROOT%{_datadir}/knsrcfiles \
 	$RPM_BUILD_ROOT%{_datadir}/{kservicetypes6,knotifications6,kservices6/{ServiceMenus,kded,kontact,searchproviders},kxmlgui6} \
 	$RPM_BUILD_ROOT%{_datadir}/kpackage/{kcms,genericqml} \
 	$RPM_BUILD_ROOT%{_datadir}/ksmserver \
 	$RPM_BUILD_ROOT%{_datadir}/kstyle/themes \
+	$RPM_BUILD_ROOT%{_datadir}/kxmlgui5 \
 	$RPM_BUILD_ROOT%{_datadir}/plasma/{look-and-feel,packages,plasmoids,shells} \
 	$RPM_BUILD_ROOT%{_datadir}/remoteview \
 	$RPM_BUILD_ROOT%{_datadir}/solid/actions \
@@ -36,7 +38,7 @@ install -d \
 	$RPM_BUILD_ROOT%{_datadir}/emoticons/Glass \
 	$RPM_BUILD_ROOT%{_libexecdir}/kf6 \
 	$RPM_BUILD_ROOT%{_libdir}/kf6 \
-	$RPM_BUILD_ROOT%{_libdir}/qt6/plugins/kf6/{kded,parts,propertiesdialog,urifilters,org.kde.kwindowsystem.platforms} \
+	$RPM_BUILD_ROOT%{_libdir}/qt6/plugins/kf6/{kded,kfileitemaction,parts,propertiesdialog,thumbcreator,urifilters,org.kde.kwindowsystem.platforms} \
 	$RPM_BUILD_ROOT%{_libdir}/qt6/plugins/{kcms,org.kde.kdecoration2,org.kde.kdecoration3,org.kde.kdecoration3.kcm,pim6,script} \
 	$RPM_BUILD_ROOT%{_libdir}/qt6/plugins/pim6/{akonadi,kcms,kontact,messageviewer} \
 	$RPM_BUILD_ROOT%{_libdir}/qt6/qml/org/kde/{kconfig,kio,draganddrop,kcoreaddons,kquickcontrols,kquickcontrolsaddons,kwindowsystem,private/kquickcontrols,runnermodel} \
@@ -74,6 +76,7 @@ check_filesystem_dirs
 %dir %{_datadir}/kdevappwizard
 %dir %{_datadir}/kdevappwizard/templates
 %dir %{_datadir}/kf6
+%dir %{_datadir}/kglobalaccel
 %dir %{_datadir}/kf6/kcookiejar
 %dir %{_datadir}/kf6/locale
 %dir %{_datadir}/kf6/widgets
@@ -95,6 +98,7 @@ check_filesystem_dirs
 %dir %{_datadir}/ksmserver
 %dir %{_datadir}/kstyle
 %dir %{_datadir}/kstyle/themes
+%dir %{_datadir}/kxmlgui5
 %dir %{_datadir}/plasma
 %dir %{_datadir}/plasma/look-and-feel
 %dir %{_datadir}/plasma/packages
@@ -113,9 +117,11 @@ check_filesystem_dirs
 %dir %{_libdir}/qt6/plugins/kcms
 %dir %{_libdir}/qt6/plugins/kf6
 %dir %{_libdir}/qt6/plugins/kf6/kded
+%dir %{_libdir}/qt6/plugins/kf6/kfileitemaction
 %dir %{_libdir}/qt6/plugins/kf6/org.kde.kwindowsystem.platforms
 %dir %{_libdir}/qt6/plugins/kf6/parts
 %dir %{_libdir}/qt6/plugins/kf6/propertiesdialog
+%dir %{_libdir}/qt6/plugins/kf6/thumbcreator
 %dir %{_libdir}/qt6/plugins/kf6/urifilters
 %dir %{_libdir}/qt6/plugins/pim6
 %dir %{_libdir}/qt6/plugins/pim6/akonadi
