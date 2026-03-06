@@ -6,7 +6,7 @@
 Summary:	KDE Frameworks - common directories
 Name:		kf6-dirs
 Version:	6.23.0
-Release:	1
+Release:	2
 License:	LGPL
 Group:		X11/Libraries
 URL:		http://www.kde.org/
@@ -24,6 +24,7 @@ install -d \
 	$RPM_BUILD_ROOT%{_datadir}/kdevappwizard/templates \
 	$RPM_BUILD_ROOT%{_datadir}/kf6/{kcookiejar,widgets/pics,locale} \
 	$RPM_BUILD_ROOT%{_datadir}/kio/servicemenus \
+	$RPM_BUILD_ROOT%{_datadir}/knsrcfiles \
 	$RPM_BUILD_ROOT%{_datadir}/{kservicetypes6,knotifications6,kservices6/{ServiceMenus,kded,kontact,searchproviders},kxmlgui6} \
 	$RPM_BUILD_ROOT%{_datadir}/kpackage/{kcms,genericqml} \
 	$RPM_BUILD_ROOT%{_datadir}/ksmserver \
@@ -86,6 +87,7 @@ check_filesystem_dirs
 %dir %{_datadir}/kservices6/kontact
 %dir %{_datadir}/kservices6/searchproviders
 %dir %{_datadir}/knotifications6
+%dir %{_datadir}/knsrcfiles
 %dir %{_datadir}/kxmlgui6
 %dir %{_datadir}/kpackage
 %dir %{_datadir}/kpackage/genericqml
