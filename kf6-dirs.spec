@@ -6,7 +6,7 @@
 Summary:	KDE Frameworks - common directories
 Name:		kf6-dirs
 Version:	6.24.0
-Release:	1
+Release:	2
 License:	LGPL
 Group:		X11/Libraries
 URL:		http://www.kde.org/
@@ -45,7 +45,7 @@ install -d \
 	$RPM_BUILD_ROOT%{_libdir}/qt6/qml/org/kde/plasma/private \
 	$RPM_BUILD_ROOT%{_libdir}/qt6/qml/QtQuick/Controls/Styles \
 	$RPM_BUILD_ROOT%{_libdir}/qt6/platformqml/touch/org/kde/plasma \
-	$RPM_BUILD_ROOT%{_docdir}/HTML/{af,ca,cs,da,de,el,en,eo,es,et,fr,gl,he,hu,it,ja,ko,lt,nds,nl,nn,pl,pt,pt_BR,ro,ru,sl,sr,sr@latin,sv,tr,uk,wa,xh,zh_CN}/kcontrol \
+	$RPM_BUILD_ROOT%{_docdir}/HTML/{af,ar,ca,cs,da,de,el,en,eo,es,et,fr,gl,he,hu,it,ja,ko,lt,nds,nl,nn,pl,pt,pt_BR,ro,ru,sl,sr,sr@latin,sv,tr,uk,wa,xh,zh_CN}/kcontrol \
 	$RPM_BUILD_ROOT%{_sysconfdir}/xdg/ui
 
 
@@ -153,6 +153,8 @@ check_filesystem_dirs
 %dir %{_docdir}/HTML/
 %lang(af) %dir %{_docdir}/HTML/af
 %lang(af) %dir %{_docdir}/HTML/af/kcontrol
+%lang(ar) %dir %{_docdir}/HTML/ar
+%lang(ar) %dir %{_docdir}/HTML/ar/kcontrol
 %lang(ca) %dir %{_docdir}/HTML/ca
 %lang(ca) %dir %{_docdir}/HTML/ca/kcontrol
 %lang(cs) %dir %{_docdir}/HTML/cs
