@@ -15,6 +15,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 KDE Frameworks - common directories.
 
+%description -l pl.UTF-8
+Wspólne katalogi dla szkieletów KDE.
+
 %prep
 
 %install
